@@ -5,7 +5,14 @@ body {
     padding: 0;
     background: url('background.png') no-repeat center center fixed;
     background-size: cover;
-    color: #fff;
+    color: #E0E0E0;
+}
+
+/* General body text (paragraphs) */
+body, p {
+    color: #D0E8F2; /* Very Light Blue for paragraph text */
+    line-height: 1.6; /* Ensures good readability */
+    font-size: 16px; /* Standard font size */
 }
 
 header, footer {
@@ -130,7 +137,7 @@ footer {
     text-align: center;
     padding: 20px 0;
     background-color: rgba(0, 0, 0, 0.8);
-    color: white;
+    color: #001f3f;
 }
 
 footer p {
@@ -143,6 +150,34 @@ header .logo img {
     width: 150px;
     height: auto;
     display: block;
+}
+
+.logo img {
+    width: 150px;
+    height: auto;
+    mix-blend-mode: multiply; /* Blend the logo with the background */
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.6));
+}
+
+/* Optional: If the header background is also transparent, adjust it */
+header {
+    background-color: rgba(0, 0, 0, 0.5); /* Make the header background semi-transparent */
+    padding: 10px 0;
+}
+
+/* Headers */
+h1, h2, h3 {
+    color: #FFA500; /* Bright Orange for headers to make them pop */
+}
+
+/* Links */
+a {
+    color: #008080; /* Teal for links to complement the theme */
+    text-decoration: none;
+}
+
+a:hover {
+    color: #F5F5DC; /* Warm Beige for hovered links */
 }
 
 
@@ -210,4 +245,6 @@ header .logo img {
         font-size: 1rem;
     }
 }
+
+
 
