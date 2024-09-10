@@ -15,6 +15,10 @@ body, p {
     font-size: 16px; /* Standard font size */
 }
 
+mark {
+  background-color: #F5F5DC;
+}
+
 header, footer {
     background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background for header and footer */
     color: white;
