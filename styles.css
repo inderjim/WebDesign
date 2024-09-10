@@ -256,37 +256,112 @@ a:hover {
     margin-bottom: 30px;
 }
 
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* General Section Styling */
+section {
+    padding: 60px 0;
+    text-align: center;
+}
+
+/* Services Section */
+.servicesMain {
+    background-color: #f0f8ff;
+}
+
+.servicesMain-list {
+    display: flex;
+    justify-content: space-around;
+}
+
+.servicesMain-item {
+    width: 30%;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.servicesMain-item:hover {
+    transform: translateY(-10px);
+}
+
+.servicesMain-item h3 {
+    color: #008080; /* Teal to match the theme */
+}
+
+/* Why Choose Us Section */
+.why-choose-us {
+    background-color: #e6f7ff;
+}
+
+.reasons {
+    display: flex;
+    justify-content: space-around;
+}
+
+.reason-item {
+    width: 30%;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.reason-item h3 {
+    color: #FFA500; /* Bright orange to align with theme */
+}
+
+/* Moto Section */
+.moto {
+    background-color: #008080;
+    color: #ffffff;
+}
+
+.moto p {
+    font-size: 1.5rem;
+    font-style: italic;
+}
+
+/* Footer */
+footer {
+    background-color: #001f3f;
+    color: #ffffff;
+    padding: 20px 0;
+}
+
+/* CTA Button */
 .cta-button {
-    display: inline-block;
-    padding: 10px 30px;
-    background-color: #00b4d8;
+    background-color: #FFA500;
     color: white;
-    font-size: 1.2rem;
+    padding: 15px 30px;
     border: none;
     border-radius: 5px;
-    text-decoration: none;
+    font-size: 1.2rem;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    text-transform: uppercase;
 }
 
 .cta-button:hover {
-    background-color: #0077b6;
+    background-color: #ff7f00;
 }
 
-/* Mobile Responsiveness */
-@media screen and (max-width: 768px) {
-    .banner h1 {
-        font-size: 2rem;
+/* Media Queries */
+@media (max-width: 768px) {
+    .service-list, .reasons {
+        flex-direction: column;
     }
-    
-    .banner p {
-        font-size: 1rem;
-    }
-    
-    .cta-button {
-        font-size: 1rem;
+
+    .service-item, .reason-item {
+        width: 80%;
+        margin: 10px auto;
     }
 }
+
 
 
 
