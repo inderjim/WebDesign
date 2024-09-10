@@ -1,0 +1,213 @@
+/* Global Background Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('background.png') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+}
+
+header, footer {
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background for header and footer */
+    color: white;
+    padding: 15px 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+/* Service Page Styling */
+.services-page {
+    padding: 60px 20px;
+    background-color: rgba(0, 0, 0, 0.6); /* Adding semi-transparent background */
+    color: #fff;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+.services-page h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.service-item {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* About Page Styling */
+.about-page {
+    padding: 60px 20px;
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+    color: #fff;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+.about-page h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.about-page p {
+    line-height: 1.6;
+}
+
+/* Contact Page Styling */
+.contact-page {
+    padding: 60px 20px;
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+    color: #fff;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+.contact-page h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.contact-form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: none;
+    font-size: 1rem;
+}
+
+.contact-form button {
+    padding: 10px 20px;
+    background-color: #00b4d8;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+.contact-form button:hover {
+    background-color: #0077b6;
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+}
+
+footer p {
+    margin: 0;
+}
+
+
+/* CSS for Logo Alignment */
+header .logo img {
+    width: 150px;
+    height: auto;
+    display: block;
+}
+
+
+/* Main Banner Styles */
+.banner {
+    background: url('background.png') no-repeat center center fixed;
+    color: #fff;
+    padding: 100px 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    position: relative;
+}
+
+.banner-content {
+    max-width: 800px;
+}
+
+.banner-logo {
+    width: 150px;
+    margin-bottom: 20px;
+}
+
+.banner h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.banner p {
+    font-size: 1.25rem;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 10px 30px;
+    background-color: #00b4d8;
+    color: white;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #0077b6;
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+    .banner h1 {
+        font-size: 2rem;
+    }
+    
+    .banner p {
+        font-size: 1rem;
+    }
+    
+    .cta-button {
+        font-size: 1rem;
+    }
+}
+
