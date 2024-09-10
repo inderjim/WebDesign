@@ -30,22 +30,57 @@ header, footer {
     margin: 0 auto;
 }
 
+
+/* Navigation Bar */
+nav {
+    background-color: #008080; /* Teal background matching the theme */
+    padding: 15px 0; /* Adds padding for a larger bar */
+    text-align: center; /* Center the navigation items */
+}
+
+/* Navigation Links */
 nav ul {
-    list-style-type: none;
+    list-style-type: none; /* Remove bullet points */
+    margin: 0;
     padding: 0;
-    text-align: center;
 }
 
 nav ul li {
-    display: inline-block;
-    margin: 0 15px;
+    display: inline-block; /* Horizontal navigation */
+    margin: 0 20px; /* Space between navigation items */
 }
 
 nav ul li a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
+    color: #ffffff; /* White font color to contrast with teal background */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Make the links bold */
+    font-size: 1.2rem; /* Increase font size for prominence */
+    padding: 10px 20px; /* Add padding inside links for clickable area */
+    transition: color 0.3s, background-color 0.3s; /* Smooth transition effect for hover */
 }
+
+/* Hover effect for navigation links */
+nav ul li a:hover {
+    color: #FFA500; /* Change to bright orange on hover */
+    background-color: rgba(255, 255, 255, 0.1); /* Slight white background on hover */
+    border-radius: 5px; /* Round the corners for hover effect */
+}
+
+
+.home-page {
+    padding: 60px 20px;
+    background-color: rgba(0, 0, 0, 0.6); /* Adding semi-transparent background */
+    color: #fff;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+.home-page h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
 
 /* Service Page Styling */
 .services-page {
@@ -185,9 +220,10 @@ a:hover {
 }
 
 
+
 /* Main Banner Styles */
 .banner {
-    background: url('background.png') no-repeat center center fixed;
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
     color: #fff;
     padding: 100px 20px;
     text-align: center;
