@@ -362,6 +362,19 @@ footer {
     }
 }
 
-
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+    .banner h1 {
+        font-size: 2rem;
+    }
+    
+    .banner p {
+        font-size: 1rem;
+    }
+    
+    .cta-button {
+        font-size: 1rem;
+    }
+}
 
 
