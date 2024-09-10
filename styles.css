@@ -10,9 +10,9 @@ body {
 
 /* General body text (paragraphs) */
 body, p {
-    color: #D0E8F2; /* Very Light Blue for paragraph text */
+    color: #A0D1D1; /* Very Light Blue for paragraph text */
     line-height: 1.6; /* Ensures good readability */
-    font-size: 16px; /* Standard font size */
+    font-size: 18px; /* Standard font size */
 }
 
 mark {
@@ -205,6 +205,8 @@ a:hover {
 .banner-logo {
     width: 150px;
     margin-bottom: 20px;
+    mix-blend-mode: multiply; /* Blend the logo with the background */
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.6));
 }
 
 .banner h1 {
