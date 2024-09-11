@@ -5,6 +5,7 @@ body {
     padding: 0;
     background: url('background.png') no-repeat center center fixed;
     background-size: cover;
+    background-position: center;
     transition: background-image 0.5s ease-in-out;
     color: #E0E0E0;
 }
@@ -390,10 +391,6 @@ footer {
 
 /* Mobile Responsiveness */
 @media screen and (max-width: 768px) {
-    body {
-        padding: 10px;
-        font-size: 14px;
-    }
 
     header .logo img {
         width: 120px;
@@ -414,6 +411,8 @@ footer {
    nav ul {
         flex-direction: row; /* Make sure items are still in a single line */
         flex-wrap: wrap; /* Allow wrapping if necessary */
+        justify-content: space-around; /* Spread items across the width */
+        padding: 10px; /* Add some padding for better layout */
     }
 
     nav ul li {
@@ -421,7 +420,7 @@ footer {
     }
 
     nav ul li a {
-        font-size: 16px; /* Make font smaller to fit in one line */
+        font-size: 8px; /* Make font smaller to fit in one line */
     } 
     
     /* Stack services vertically on mobile */
