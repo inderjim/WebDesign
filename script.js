@@ -17,28 +17,34 @@ function changeBackground(imageUrl) {
     document.body.style.backgroundImage = `url(${imageUrl})`;
 }
 
-// Function to detect section in the viewport
+// Function to detect which section is in the viewport
 function checkScroll() {
+    const scrollPosition = window.pageYOffset || document.documentElement.scrollTop; // Ensure compatibility on mobile
+    
     const servicesPosition = servicesSection.getBoundingClientRect();
     const whyChooseUsPosition = whyChooseUsSection.getBoundingClientRect();
+    
+    // Adjust thresholds for mobile to account for smaller screens
+    const threshold = window.innerHeight / 3; // This helps trigger the background change earlier
 
-    // When the user scrolls to the Services section
-    if (servicesPosition.top >= 0 && servicesPosition.bottom <= window.innerHeight) {
+    // Check if the user is within the Services section
+    if (scrollPosition >= servicesSection.offsetTop - threshold && scrollPosition < servicesSection.offsetTop + servicesSection.offsetHeight) {
         changeBackground(backgroundImages.services);
     }
-    // When the user scrolls to the Why Choose Us section
-    else if (whyChooseUsPosition.top >= 0 && whyChooseUsPosition.bottom <= window.innerHeight) {
+    // Check if the user is within the Why Choose Us section
+    else if (scrollPosition >= whyChooseUsSection.offsetTop - threshold && scrollPosition < whyChooseUsSection.offsetTop + whyChooseUsSection.offsetHeight) {
         changeBackground(backgroundImages.whyChooseUs);
     }
-    // Default background when not in specific sections
+    // Otherwise, set the default background
     else {
         changeBackground(backgroundImages.default);
     }
 }
 
-// Attach the scroll event listener
+// Attach the scroll event listener for both desktop and mobile
 window.addEventListener('scroll', checkScroll);
 
-// Set initial background
-changeBackground(backgroundImages.default);
-
+// Set the initial background when the page loads
+window.addEventListener('load', () => {
+    changeBackground(backgroundImages.default);
+});

@@ -413,8 +413,7 @@ footer {
     
    nav ul {
         flex-direction: row; /* Make sure items are still in a single line */
-        justify-content: space-around; /* Spread items across the width */
-        padding: 10px; /* Add some padding for better layout */
+        flex-wrap: wrap; /* Allow wrapping if necessary */
     }
 
     nav ul li {
