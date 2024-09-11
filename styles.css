@@ -5,6 +5,7 @@ body {
     padding: 0;
     background: url('background.png') no-repeat center center fixed;
     background-size: cover;
+    transition: background-image 0.5s ease-in-out;
     color: #E0E0E0;
 }
 
@@ -268,9 +269,6 @@ section {
 }
 
 /* Services Section */
-.servicesMain {
-    background-color: #f0f8ff;
-}
 
 .servicesMain-list {
     display: flex;
@@ -279,7 +277,7 @@ section {
 
 .servicesMain-item {
     width: 30%;
-    background-color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.6); /* Adding semi-transparent background */
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -295,9 +293,9 @@ section {
 }
 
 /* Why Choose Us Section */
-.why-choose-us {
+/*.why-choose-us {
     background-color: #e6f7ff;
-}
+}*/
 
 .reasons {
     display: flex;
@@ -307,7 +305,7 @@ section {
 .reason-item {
     width: 30%;
     padding: 20px;
-    background-color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.6); /* Adding semi-transparent background */
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -318,14 +316,42 @@ section {
 
 /* Moto Section */
 .moto {
-    background-color: #008080;
-    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.6); /* Adding semi-transparent background */
+    /*color: #ffffff;*/
 }
 
 .moto p {
     font-size: 1.5rem;
     font-style: italic;
 }
+/* Add space between Main and servicesMain sections */
+#home {
+    margin-bottom: 300px; /* Adjust the gap size */
+}
+
+#servicesMain {
+    margin-top: 300px; /* This will create a gap before the Why Choose Us section */
+}
+
+/* Add space between servicesMain and why-choose-us sections */
+#servicesMain {
+    margin-bottom: 300px; /* Adjust the gap size */
+}
+
+#why-choose-us {
+    margin-top: 300px; /* This will create a gap before the Why Choose Us section */
+}
+
+/* Add space between why-choose-us and moto sections */
+#why-choose-us {
+    margin-bottom: 300px; /* Adjust this value as needed */
+}
+
+#moto {
+    margin-top: 300px; /* Adjust this value as needed */
+}
+
+
 
 /* Footer */
 footer {
@@ -364,7 +390,16 @@ footer {
 
 /* Mobile Responsiveness */
 @media screen and (max-width: 768px) {
-    .banner h1 {
+    body {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    header .logo img {
+        width: 120px;
+    }
+   
+   .banner h1 {
         font-size: 2rem;
     }
     
@@ -375,6 +410,42 @@ footer {
     .cta-button {
         font-size: 1rem;
     }
+    
+   nav ul {
+        flex-direction: row; /* Make sure items are still in a single line */
+        justify-content: space-around; /* Spread items across the width */
+        padding: 10px; /* Add some padding for better layout */
+    }
+
+    nav ul li {
+        margin: 0 8px; /* Reduce the space between navigation items */
+    }
+
+    nav ul li a {
+        font-size: 16px; /* Make font smaller to fit in one line */
+    } 
+    
+    /* Stack services vertically on mobile */
+    #servicesMain .servicesMain-list {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #servicesMain .servicesMain-item {
+        margin-bottom: 20px;
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Adjust text sizes in Why Choose Us section */
+    #why-choose-us h2, #moto h2 {
+        font-size: 1.8rem;
+    }
+
+    #why-choose-us p, #moto p {
+        font-size: 1rem;
+    }
+    
 }
 
 
