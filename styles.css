@@ -389,6 +389,133 @@ footer {
     }
 }
 
+
+/* Popup Styles */
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.popup-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 500px;
+    text-align: center;
+}
+
+/* Style placeholder text */
+input::placeholder, textarea::placeholder {
+    color: #999; /* Grey color for placeholder */
+    font-style: italic; /* Make the placeholder italic */
+}
+
+
+/* Close Button */
+.close-btn {
+    position: absolute;
+    top: 10px; /* Adjust this for vertical alignment */
+    right: 15px; /* Adjust this for horizontal alignment */
+    font-size: 28px;
+    font-weight: bold;
+    color: 0; /* Use a visible color (can be changed to fit your theme) */
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.close-btn:hover {
+    color: #f00; /* Change to red on hover for visibility */
+}
+
+
+.inquiry-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px; /* Adjust text/icon size */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: pulse 1.5s infinite; /* Animation to pulse */
+}
+
+/* Pulse Animation */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 10px rgba(0, 86, 179, 0.7);
+    }
+    50% {
+        transform: scale(1.1); /* Slightly bigger */
+        box-shadow: 0 0 20px rgba(0, 86, 179, 0.9);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 10px rgba(0, 86, 179, 0.7);
+    }
+}
+
+/* Add hover effect */
+.inquiry-btn:hover {
+    background-color: #004494;
+    animation: none; /* Stop the animation on hover for smoothness */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    box-shadow: 0 8px 12px rgba(0, 86, 179, 0.9);
+}
+
+
+
+/* Enhanced button styling */
+button[type="submit"] {
+    background-color: #007BFF; /* Blue color */
+    color: white;
+    font-size: 18px; /* Larger text size */
+    padding: 15px 30px; /* More padding to make it bigger */
+    border: none;
+    border-radius: 8px; /* Rounded corners */
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transitions */
+}
+
+/* Hover effect */
+button[type="submit"]:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Deeper shadow */
+    transform: translateY(-2px); /* Slight raise on hover */
+}
+
+/* Button pulse animation */
+button[type="submit"] {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+
 /* Mobile Responsiveness */
 @media screen and (max-width: 768px) {
 

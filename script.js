@@ -9,7 +9,7 @@ const whyChooseUsSection = document.getElementById('why-choose-us');
 const backgroundImages = {
     default: 'background.png',  // Background for initial view (Home section)
     services: 'bg2.jpg', // Background for Services section
-    whyChooseUs: 'bg3.jpg' // Background for Why Choose Us section
+    whyChooseUs: 'whyus.jpg' // Background for Why Choose Us section
 };
 
 // Function to change the background image
@@ -48,3 +48,27 @@ window.addEventListener('scroll', checkScroll);
 window.addEventListener('load', () => {
     changeBackground(backgroundImages.default);
 });
+
+
+// Get elements
+const popup = document.getElementById("inquiryPopup");
+const inquiryBtn = document.getElementById("inquiryBtn");
+const closeBtn = document.querySelector(".close-btn");
+
+// Open the popup when the button is clicked
+inquiryBtn.onclick = function () {
+    popup.style.display = "block";
+}
+
+// Close the popup when the close button is clicked
+closeBtn.onclick = function () {
+    popup.style.display = "none";
+}
+
+// Close the popup when clicking outside of the popup content
+window.onclick = function (event) {
+    if (event.target == popup) {
+        popup.style.display = "none";
+    }
+}
+
