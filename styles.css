@@ -475,6 +475,24 @@ input::placeholder, textarea::placeholder {
     box-shadow: 0 8px 12px rgba(0, 86, 179, 0.9);
 }
 
+/* Style for larger input boxes and textarea */
+#inquiryForm input[type="text"],
+#inquiryForm input[type="email"],
+#inquiryForm textarea {
+    width: 100%;  /* Full width of the parent container */
+    padding: 15px; /* More padding for larger input fields */
+    font-size: 16px; /* Larger font size */
+    border-radius: 5px; /* Rounded corners */
+    border: 1px solid #ccc; /* Border for better visibility */
+    box-sizing: border-box; /* Ensures padding doesn't overflow the box */
+    margin-bottom: 20px; /* Adds space between input fields */
+}
+
+/* Larger textarea */
+#inquiryForm textarea {
+    height: 150px; /* Set a larger height for the textarea */
+}
+
 
 
 /* Enhanced button styling */
