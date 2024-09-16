@@ -83,6 +83,9 @@ nav ul li a:hover {
     text-align: center;
 }
 
+.home-page p {
+    color: white;
+}
 
 /* Service Page Styling */
 .services-page {
@@ -97,6 +100,10 @@ nav ul li a:hover {
     font-size: 2rem;
     margin-bottom: 20px;
     text-align: center;
+}
+
+.services-page p {
+    color: white;
 }
 
 .service-item {
@@ -121,6 +128,7 @@ nav ul li a:hover {
 
 .about-page p {
     line-height: 1.6;
+    color: white;
 }
 
 /* Contact Page Styling */
@@ -136,6 +144,10 @@ nav ul li a:hover {
     font-size: 2rem;
     margin-bottom: 20px;
     text-align: center;
+}
+
+.contact-page p {
+    color: white;
 }
 
 .contact-form {
