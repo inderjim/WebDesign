@@ -566,7 +566,8 @@ button[type="submit"] {
     }
 
     nav ul li a {
-        font-size: 8px; /* Make font smaller to fit in one line */
+        font-size: 12px; /* Make font smaller to fit in one line */
+        padding: 12px 12px; /* Reduce padding to fit text in one line */
     } 
     
     /* Stack services vertically on mobile */
