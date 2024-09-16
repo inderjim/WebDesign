@@ -72,3 +72,26 @@ window.onclick = function (event) {
     }
 }
 
+document.getElementById('inquiryForm').addEventListener('submit', function(e) {
+    e.preventDefault(); // Prevent the default form submission behavior
+
+    const form = e.target;
+    const formData = new FormData(form);
+
+    fetch(form.action, {
+        method: form.method,
+        body: formData,
+        headers: {
+            'Accept': 'application/json'
+        }
+    }).then(response => {
+        if (response.ok) {
+            alert("Danke für Ihre Anfrage! Sie werden zur Startseite weitergeleitet.");
+            window.location.href = "index.html"; // Redirect to home page after successful submission
+        } else {
+            alert("Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut.");
+        }
+    }).catch(error => {
+        alert("Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut.");
+    });
+});
