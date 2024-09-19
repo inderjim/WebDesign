@@ -111,6 +111,14 @@ nav ul li a:hover {
     text-align: center;
 }
 
+/* General styling for service images */
+.service-item img {
+    width: 1024px; /* Default width for larger screens */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 20px; /* Space between image and text */
+    border-radius: 8px; /* Rounded corners */
+}
+
 /* About Page Styling */
 .about-page {
     padding: 60px 20px;
@@ -601,6 +609,17 @@ button[type="submit"] {
 
     #why-choose-us p, #moto p {
         font-size: 1rem;
+    }
+    
+   .service-item img {
+      width: 100%; /* Make image take full width on mobile */
+      height: auto; /* Keep aspect ratio */
+      margin: 0 0 15px 0; /* Adjust margins for mobile */
+    }
+  
+   .service-item {
+      display: block; /* Stack image and text vertically */
+      text-align: center; /* Center-align the text */
     }
     
 }
