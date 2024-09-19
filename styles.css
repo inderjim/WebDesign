@@ -113,7 +113,7 @@ nav ul li a:hover {
 
 /* General styling for service images */
 .service-item img {
-    width: 1024px; /* Default width for larger screens */
+    width:  1920px; /* Default width for larger screens */
     height: auto; /* Maintain aspect ratio */
     margin-right: 20px; /* Space between image and text */
     border-radius: 8px; /* Rounded corners */
@@ -134,9 +134,26 @@ nav ul li a:hover {
     text-align: center;
 }
 
-.about-page p {
+.about-page h4 {
     line-height: 1.6;
     color: white;
+}
+
+/* General formatting for list items */
+li {
+    font-size: 16px; /* Change font size */
+    font-weight: bold; /* Make the text bold */
+    color: white; /* Change text color */
+    line-height: 1.6; /* Increase line spacing */
+    padding: 5px 0; /* Add vertical space between list items */
+    padding-left: 5px; /* Adjust this to reduce the gap between bullet and text */
+    text-indent: -5px; /* Negative indent brings the text closer to the bullet */
+}
+
+/* Remove extra padding from the list */
+ul, ol {
+    padding-left: 20px; /* Adjust to reduce space between the bullet and text */
+    margin-left: 0;
 }
 
 /* Contact Page Styling */
@@ -298,8 +315,8 @@ section {
 
 .servicesMain-item {
     width: 30%;
-    background-color: rgba(0, 0, 0, 0.6); /* Adding semi-transparent background */
     padding: 20px;
+    background-color: rgba(0, 0, 0, 0.6); /* Adding semi-transparent background */
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
@@ -310,7 +327,7 @@ section {
 }
 
 .servicesMain-item h3 {
-    color: #008080; /* Teal to match the theme */
+    color: #FFA500; /* Bright orange to align with theme */
 }
 
 /* Why Choose Us Section */
@@ -329,6 +346,11 @@ section {
     background-color: rgba(0, 0, 0, 0.6); /* Adding semi-transparent background */
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.reason-item:hover {
+    transform: translateY(-10px);
 }
 
 .reason-item h3 {
@@ -555,7 +577,7 @@ button[type="submit"] {
 
 
 /* Mobile Responsiveness */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 600px) {
 
     header .logo img {
         width: 120px;
@@ -599,7 +621,6 @@ button[type="submit"] {
     #servicesMain .servicesMain-item {
         margin-bottom: 20px;
         width: 100%;
-        text-align: center;
     }
 
     /* Adjust text sizes in Why Choose Us section */
@@ -611,15 +632,26 @@ button[type="submit"] {
         font-size: 1rem;
     }
     
-   .service-item img {
-      width: 100%; /* Make image take full width on mobile */
-      height: auto; /* Keep aspect ratio */
-      margin: 0 0 15px 0; /* Adjust margins for mobile */
+    .service-item img {
+        width: 350px; /* Increase the image size to 80% of the container */
+        height: auto; /* Keep aspect ratio */
+        margin: 0 auto 20px auto; /* Center image on mobile and add margin below */
+        display: block; /* Center the image by making it a block element */
     }
-  
-   .service-item {
-      display: block; /* Stack image and text vertically */
-      text-align: center; /* Center-align the text */
+    
+    .service-item {
+        display: block; /* Stack image and text vertically */
+        text-align: center; /* Center-align the text */
+        margin-bottom: 30px; /* Add space between service items */
+    }
+
+    .service-item h3 {
+        font-size: 1.6rem; /* Increase heading size for better readability on mobile */
+    }
+
+    .service-item h4 {
+        font-size: 1.2rem; /* Increase paragraph size for better readability */
+        line-height: 1.6; /* Improve spacing between lines of text */
     }
     
 }
