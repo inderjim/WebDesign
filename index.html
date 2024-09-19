@@ -105,7 +105,7 @@
         <div id="inquiryPopup" class="popup">
             <div class="popup-content">
                 <span class="close-btn">&times;</span>
-                <h2>Inquire Us</h2>
+                <h2>Anfrage senden</h2>
                 <form id="inquiryForm"
                   action="https://formspree.io/f/xqazowqr"
                   method="POST"
@@ -113,13 +113,25 @@
                     <label for="name">Name:</label><br>
                     <input type="text" id="name" name="name" placeholder="Geben Sie Ihren Namen ein" required><br><br> <!-- Placeholder added -->
                     
+                      <label for="service">Dienstleistung auswählen:</label>
+                      <div class="checkbox-group">
+                          <input type="checkbox" id="heating" name="service[]" value="heating">
+                          <label for="heating">Heizung</label>
+
+                          <input type="checkbox" id="plumbing" name="service[]" value="plumbing">
+                          <label for="plumbing">Sanitär</label>
+
+                          <input type="checkbox" id="repair" name="service[]" value="repair">
+                          <label for="repair">Reparatur</label>
+                      </div>
+                    
                     <label for="email">Email:</label><br>
                     <input type="email" id="email" name="email" placeholder="Geben Sie Ihre E-Mail ein" required><br><br> <!-- Placeholder added -->
                     
                     <label for="message">Nachricht:</label><br>
                     <textarea id="message" name="message" placeholder="Schreiben Sie Ihre Nachricht hier" required></textarea><br><br> <!-- Placeholder added -->
                     
-                    <button type="submit">Anfrage senden</button>
+                    <button type="submit">Senden</button>
                 </form>
             </div>
         </div>
