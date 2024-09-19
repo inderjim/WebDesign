@@ -634,7 +634,7 @@ button[type="submit"] {
     }
     
     .service-item img {
-        width: 350px; /* Increase the image size to 80% of the container */
+        width: 100%; /* Increase the image size to 80% of the container */
         height: auto; /* Keep aspect ratio */
         margin: 0 auto 20px auto; /* Center image on mobile and add margin below */
         display: block; /* Center the image by making it a block element */
