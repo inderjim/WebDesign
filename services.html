@@ -36,23 +36,61 @@
             <h3>Heizungsinstallation</h3>
             <h4>Wir bieten professionelle Heizungsinstallationen für Wohn- und Geschäftsräume an. Von energieeffizienten Systemen bis hin zu großen Installationen - wir sind für Sie da.<h4>
             <h4>Wir bieten professionelle Heizungsinstallationen sowohl für private als auch für gewerbliche Kunden an.</h4>
-            <img src="heating-installation.jpg" alt="Heizungsinstallation">
+                    
+            <!-- Image Thumbnails (Resized via CSS) -->
+            <div class="thumbnail-gallery">
+                <img src="heating1.jpg" alt="Heizungsinstallation Bild 1" class="thumbnail" onclick="openLightbox('heating', 0)">
+                <img src="heating2.jpg" alt="Heizungsinstallation Bild 2" class="thumbnail" onclick="openLightbox('heating', 1)">
+                <img src="heating3.jpg" alt="Heizungsinstallation Bild 3" class="thumbnail" onclick="openLightbox('heating', 2)">
+            </div>
         </div>
+        
         <div class="service-item">
             <h3>Sanitär</h3>
             <h4>Unsere zertifizierten Klempner stehen für eine Vielzahl von Dienstleistungen zur Verfügung, einschließlich Rohrinstallationen, Reparaturen und Wartungen, um Ihre Systeme reibungslos am Laufen zu halten.</h4>
-            <img src="Sanitaer.jpg" alt="Sanitär">
+                    
+             <!-- Image Thumbnails (Resized via CSS) -->
+             <div class="thumbnail-gallery">
+                <img src="Sanitaer1.jpg" alt="Sanitärreparaturen Bild 1" class="thumbnail" onclick="openLightbox('plumbing', 0)">
+                <img src="Sanitaer2.jpg" alt="Sanitärreparaturen Bild 2" class="thumbnail" onclick="openLightbox('plumbing', 1)">
+                <img src="Sanitaer3.jpg" alt="Sanitärreparaturen Bild 3" class="thumbnail" onclick="openLightbox('plumbing', 2)">
+                <img src="Sanitaer4.jpg" alt="Sanitärreparaturen Bild 4" class="thumbnail" onclick="openLightbox('plumbing', 3)">
+           </div>
         </div>
+        
         <div class="service-item">
             <h3>Wartung & Reparaturen</h3>
             <h4>Regelmäßige Wartung und schnelle Reparaturen sind entscheidend für die Lebensdauer Ihrer Heizungs- und Sanitärsysteme. Vertrauen Sie Aqua Heat Solution für zuverlässige und erschwingliche Dienstleistungen.</h4>
-            <img src="Reparaturen.jpg" alt="Wartung & Reparaturen">
+            
+            <!-- Image Thumbnails (Resized via CSS) -->
+            <div class="thumbnail-gallery">
+                <img src="repair1.jpg" alt="Reparatur Bild 1" class="thumbnail" onclick="openLightbox('repair', 0)">
+                <img src="repair2.jpg" alt="Reparatur Bild 2" class="thumbnail" onclick="openLightbox('repair', 1)">
+                <img src="repair3.jpg" alt="Reparatur Bild 3" class="thumbnail" onclick="openLightbox('repair', 2)">
+                <img src="repair4.jpg" alt="Reparatur Bild 4" class="thumbnail" onclick="openLightbox('repair', 3)">
+            </div>    
         </div>
+        
         <div class="service-item">
             <h3>Notdienst</h3>
             <h4>Wir bieten einen 24/7-Notdienst für Heizung und Sanitär, damit Sie nie ohne Wärme oder Wasser dastehen, wenn es darauf ankommt.</h4>
-            <img src="Notdienst.jpg" alt="Notdienst">
+                       
+            <!-- Image Thumbnails (Resized via CSS) -->
+             <div class="thumbnail-gallery">
+                <img src="notdienst1.jpg" alt="Notdienst Bild 1" class="thumbnail" onclick="openLightbox('notdienst', 0)">
+                <img src="notdienst2.jpg" alt="Notdienst Bild 2" class="thumbnail" onclick="openLightbox('notdienst', 1)">
+                <img src="notdienst3.jpg" alt="Notdienst Bild 3" class="thumbnail" onclick="openLightbox('notdienst', 2)">
+            </div>
         </div>
+        
+         <!-- Lightbox (Same as Before) -->
+         <div id="lightbox" class="lightbox">
+            <span class="close" onclick="closeLightbox()">&times;</span>
+            <img class="lightbox-img" id="lightboxImg">
+            <div class="lightbox-caption" id="lightboxCaption"></div>
+            <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+            <a class="next" onclick="changeSlide(1)">&#10095;</a>
+    </div>
     </section>
     
 

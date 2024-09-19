@@ -95,3 +95,58 @@ document.getElementById('inquiryForm').addEventListener('submit', function(e) {
         alert("Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut.");
     });
 });
+
+
+let currentService = '';
+let currentImageIndex = 0;
+
+// Image arrays for each service
+const serviceImages = {
+    heating: [
+        { src: 'heating1.jpg', caption: 'Heizungsinstallation Bild 1' },
+        { src: 'heating2.jpg', caption: 'Heizungsinstallation Bild 2' },
+        { src: 'heating3.jpg', caption: 'Heizungsinstallation Bild 3' }
+    ],
+    plumbing: [
+        { src: 'Sanitaer1.jpg', caption: 'Sanitärreparaturen Bild 1' },
+        { src: 'Sanitaer2.jpg', caption: 'Sanitärreparaturen Bild 2' },
+        { src: 'Sanitaer3.jpg', caption: 'Sanitärreparaturen Bild 3' }
+    ],
+    repair: [
+        { src: 'repair1.jpg', caption: 'Reparatur & Wartung Bild 1' },
+        { src: 'repair2.jpg', caption: 'Reparatur & Wartung Bild 2' },
+        { src: 'repair3.jpg', caption: 'Reparatur & Wartung Bild 3' }
+    ]
+};
+
+// Open lightbox
+function openLightbox(service, index) {
+    currentService = service;
+    currentImageIndex = index;
+    showImage(index);
+    document.getElementById('lightbox').style.display = 'block';
+}
+
+// Close lightbox
+function closeLightbox() {
+    document.getElementById('lightbox').style.display = 'none';
+}
+
+// Show image in lightbox
+function showImage(index) {
+    const image = serviceImages[currentService][index];
+    document.getElementById('lightboxImg').src = image.src;
+    document.getElementById('lightboxCaption').textContent = image.caption;
+}
+
+// Change slides
+function changeSlide(direction) {
+    currentImageIndex += direction;
+    if (currentImageIndex < 0) {
+        currentImageIndex = serviceImages[currentService].length - 1;
+    } else if (currentImageIndex >= serviceImages[currentService].length) {
+        currentImageIndex = 0;
+    }
+    showImage(currentImageIndex);
+}
+
