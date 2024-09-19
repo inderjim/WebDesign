@@ -110,12 +110,14 @@ const serviceImages = {
     plumbing: [
         { src: 'Sanitaer1.jpg', caption: 'Sanitärreparaturen Bild 1' },
         { src: 'Sanitaer2.jpg', caption: 'Sanitärreparaturen Bild 2' },
-        { src: 'Sanitaer3.jpg', caption: 'Sanitärreparaturen Bild 3' }
+        { src: 'Sanitaer3.jpg', caption: 'Sanitärreparaturen Bild 3' },
+        { src: 'Sanitaer4.jpg', caption: 'Sanitärreparaturen Bild 4' }
     ],
     repair: [
         { src: 'repair1.jpg', caption: 'Reparatur & Wartung Bild 1' },
         { src: 'repair2.jpg', caption: 'Reparatur & Wartung Bild 2' },
-        { src: 'repair3.jpg', caption: 'Reparatur & Wartung Bild 3' }
+        { src: 'repair3.jpg', caption: 'Reparatur & Wartung Bild 3' },
+        { src: 'repair4.jpg', caption: 'Reparatur & Wartung Bild 4' }
     ]
 };
 
@@ -148,5 +150,13 @@ function changeSlide(direction) {
         currentImageIndex = 0;
     }
     showImage(currentImageIndex);
+}
+
+function openPopup() {
+    document.getElementById("inquiryPopup").classList.add("active");
+}
+
+function closePopup() {
+    document.getElementById("inquiryPopup").classList.remove("active");
 }
 

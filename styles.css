@@ -437,11 +437,25 @@ footer {
     display: none;
     position: fixed;
     z-index: 1000;
-    left: 0;
-    top: 0;
+    left: 10%;
+    top: 10%;
     width: 100%;
-    height: 100%;
+    height: 80%;
     background-color: rgba(0, 0, 0, 0.6);
+}
+
+/* Pop-up Widget Styles */
+#inquiryPopup {
+    position: fixed;
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Offset by 50% to fully center */
+    width: 400px; /* Width of the pop-up */
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    z-index: 1000;
+    display: none; /* Hidden by default */
 }
 
 .popup-content {
@@ -468,7 +482,7 @@ input::placeholder, textarea::placeholder {
     right: 15px; /* Adjust this for horizontal alignment */
     font-size: 28px;
     font-weight: bold;
-    color: 0; /* Use a visible color (can be changed to fit your theme) */
+    color: #333;
     cursor: pointer;
     z-index: 1001;
 }
@@ -533,7 +547,7 @@ input::placeholder, textarea::placeholder {
 #inquiryForm h2 {
     text-align: left;
     color: #0056b3;
-    margin-bottom: 2px;
+    margin-bottom: 1px;
     margin-top: 1px;
 }
 
@@ -564,7 +578,7 @@ input::placeholder, textarea::placeholder {
 
 /* Larger textarea */
 #inquiryForm textarea {
-    height: 100px;
+    height: 80px;
     resize: none;
 }
 
@@ -579,7 +593,7 @@ input::placeholder, textarea::placeholder {
 }
 
 .checkbox-group input[type="checkbox"] {
-    margin-right: 10px; /* Space between checkbox and label */
+    margin-right: 2px; /* Space between checkbox and label */
 }
 
 /* Enhanced button styling */
