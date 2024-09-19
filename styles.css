@@ -612,15 +612,16 @@ button[type="submit"] {
         padding: 12px 12px; /* Reduce padding to fit text in one line */
     } 
     
-    /* Stack services vertically on mobile */
-    #servicesMain .servicesMain-list {
+     .servicesMain-list {
         display: flex;
-        flex-direction: column;
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center the items horizontally */
     }
 
-    #servicesMain .servicesMain-item {
-        margin-bottom: 20px;
-        width: 100%;
+    .servicesMain-item {
+        width: 90%; /* Make sure the item takes up most of the container width */
+        margin-bottom: 20px; /* Add space between the items */
+        text-align: center; /* Center text inside the items */
     }
 
     /* Adjust text sizes in Why Choose Us section */
