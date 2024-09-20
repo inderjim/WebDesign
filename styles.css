@@ -439,13 +439,43 @@ footer {
     top: 50%; /* Center vertically */
     left: 50%; /* Center horizontally */
     transform: translate(-50%, -50%); /* Offset by 50% to fully center */
-    width: 400px; /* Width of the pop-up */
+    width: 90%; /* Width of the pop-up */
+    max-width: 400px;
+    max-height: 90%; /* Limit the height of the popup to 90% of the viewport */
     background-color: #f9f9f9;
     padding: 20px;
     border-radius: 8px;
-    z-index: 1000;
-    display: none; /* Hidden by default */
+    z-index: 1001;
+    overflow-y: auto; /* Enable vertical scrolling if content exceeds height */
+    border-radius: 8px;
+    box-sizing: border-box;
 }
+
+/* Close button */
+.inquiry-popup .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Prevent body from scrolling when popup is open */
+body.popup-open {
+    overflow: hidden;
+}
+
+/* Inquiry form fields inside the popup */
+.inquiry-popup form {
+    display: flex;
+    flex-direction: column;
+}
+
+.inquiry-popup label {
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+
 
 .popup-content {
     background-color: #fff;
@@ -522,12 +552,13 @@ input::placeholder, textarea::placeholder {
 
 /* Form Container */
 #inquiryForm {
-    background-color: white;
+    background-color: #f9f9f9; /* Light background */
     padding: 8px;
     border-radius: 8px;
     width: 100%;
     max-width: 400px;
     box-sizing: border-box;
+    border-radius: 10px;
     margin-top: 1px; /* Adjust this value to move form closer to top */
     margin-bottom: 2px;
 }
@@ -542,12 +573,15 @@ input::placeholder, textarea::placeholder {
 
 /* Label */
 #inquiryForm label {
-    color: black;
+    display: block;
+    color: #333; /* Darker gray for contrast */
     text-align: left;
     font-size: 16px;
-    display: block;
     margin-bottom: 2px; /* Space below the label */
     margin-top: 0; /* Remove any space above the label */
+    font-weight: 500; /* Semi-bold to make the label stand out */
+    text-transform: capitalize; /* Capitalize the first letter for a clean look */
+    letter-spacing: 0.5px
 }
 
 /* Style for larger input boxes and textarea */
@@ -561,9 +595,16 @@ input::placeholder, textarea::placeholder {
     border-radius: 5px; /* Rounded corners */
     border: 1px solid #ccc; /* Border for better visibility */
     box-sizing: border-box; /* Ensures padding doesn't overflow the box */
+    background-color: #fff;
+    transition: border-color 0.3s ease;
 
 }
 
+#inquiryForm input[type="text"]:focus,
+#inquiryForm input[type="email"]:focus,
+#inquiryForm textarea:focus {
+    border-color: #0056b3; /* Highlight input field on focus with your theme's color */
+}
 
 /* Larger textarea */
 #inquiryForm textarea {
@@ -575,14 +616,27 @@ input::placeholder, textarea::placeholder {
 /* Checkbox Group - Single Line Layout */
 .checkbox-group {
     display: flex;
-    flex-wrap: wrap; /* Allows checkboxes to wrap to the next line if needed */
-    gap: 10px; /* Add spacing between checkboxes */
-    align-items: center; /* Align the checkboxes and labels vertically in line */
-    margin-bottom: 10px; /* Increased space below checkbox group */
+    /*flex-direction: column; /* Stack the checkboxes vertically */
+    gap: 10px; /* Space between checkboxes */
+    margin-bottom: 20px; /* Add some space at the bottom */
 }
 
 .checkbox-group input[type="checkbox"] {
-    margin-right: 2px; /* Space between checkbox and label */
+    margin-right: 1px; /* Space between checkbox and label */
+}
+
+/* Align checkbox and label horizontally */
+.checkbox-group div {
+    display: flex;
+    align-items: center; /* Ensure the checkbox and label are aligned in a single line */
+}
+
+/* Label styling */
+.checkbox-group label {
+    font-size: 14px;
+    margin-left: 1px;
+    color: #0056b3; /* Different color for checkbox labels (align with your theme) */
+    cursor: pointer; /* Make the label clickable */
 }
 
 /* Enhanced button styling */

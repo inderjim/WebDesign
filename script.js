@@ -118,6 +118,11 @@ const serviceImages = {
         { src: 'repair2.jpg', caption: 'Reparatur & Wartung Bild 2' },
         { src: 'repair3.jpg', caption: 'Reparatur & Wartung Bild 3' },
         { src: 'repair4.jpg', caption: 'Reparatur & Wartung Bild 4' }
+    ],
+    Notdienst: [
+    { src: 'Notdienst1.jpg', caption: 'Reparatur & Wartung Bild 1' },
+    { src: 'Notdienst2.jpg', caption: 'Reparatur & Wartung Bild 2' },
+    { src: 'Notdienst.jpg', caption: 'Reparatur & Wartung Bild 3' }
     ]
 };
 
