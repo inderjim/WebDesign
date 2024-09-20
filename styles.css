@@ -419,17 +419,6 @@ footer {
     background-color: #ff7f00;
 }
 
-/* Media Queries */
-@media (max-width: 768px) {
-    .service-list, .reasons {
-        flex-direction: column;
-    }
-
-    .service-item, .reason-item {
-        width: 80%;
-        margin: 10px auto;
-    }
-}
 
 
 /* Popup Styles */
@@ -637,13 +626,17 @@ button[type="submit"] {
 /* Style for the thumbnail gallery */
 .thumbnail-gallery {
     display: flex;
+    flex-direction: column; /* Stack images vertically */
     gap: 10px;
     margin-top: 10px;
+    justify-content: center; /* Center content horizontally */
+    align-items: center;      /* Center content vertically in the container */
 }
 
 /* Make the images behave like thumbnails using CSS */
 .thumbnail {
-    width: 100px;  /* Set the width for the thumbnail */
+    width: 100%;  /* Set the width for the thumbnail */
+    max-width: 200px;     /* Maximum width for the thumbnail */
     height: auto;  /* Maintain aspect ratio */
     cursor: pointer;
     border: 2px solid #ccc;
@@ -653,7 +646,7 @@ button[type="submit"] {
 
 /* Enlarge the image slightly on hover */
 .thumbnail:hover {
-    transform: scale(1.1);  /* Enlarge the thumbnail on hover */
+    transform: scale(1.05);  /* Enlarge the thumbnail on hover */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow effect */
 }
 
@@ -685,7 +678,7 @@ button[type="submit"] {
 .close {
     position: absolute;
     top: 20px;
-    right: 35px;
+    right: 20px;
     font-size: 40px;
     color: white;
     cursor: pointer;
@@ -695,24 +688,61 @@ button[type="submit"] {
     cursor: pointer;
     position: absolute;
     top: 50%;
-    padding: 16px;
+    padding: 10px;
     color: white;
     font-weight: bold;
-    font-size: 20px;
-    transition: 0.6s ease;
+    font-size: 30px;
     user-select: none;
+    background: rgba(0, 0, 0, 0.4); /* Added background to improve visibility */
+    border-radius: 50%;
+    transition: transform 0.2s;
 }
 
 .prev {
-    left: 0;
+    left: 10px;
 }
 
 .next {
-    right: 0;
+    right: 10px;
+}
+
+/* Hover effect for Previous and Next arrows */
+.prev:hover, .next:hover {
+    transform: scale(1.2);
 }
 
 
+/* Responsive Layout for larger screens */
+@media (min-width: 768px) {
+    .thumbnail-gallery {
+        flex-direction: row; /* On larger screens, switch to horizontal layout */
+        gap: 20px;
+        justify-content: center; 
+    }
 
+    .thumbnail {
+        max-width: 150px; /* Increase the max width for larger screens */
+    }
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .service-list, .reasons {
+        flex-direction: column;
+    }
+
+    .service-item, .reason-item {
+        width: 80%;
+        margin: 10px auto;
+    }
+}
+
+/* Mobile View Adjustments */
+@media (max-width: 480px) {
+    .thumbnail {
+        max-width: 90px; /* Smaller thumbnails for mobile devices */
+    }
+}
 
 
 /* Mobile Responsiveness */
@@ -792,6 +822,32 @@ button[type="submit"] {
     .service-item h4 {
         font-size: 1.2rem; /* Increase paragraph size for better readability */
         line-height: 1.6; /* Improve spacing between lines of text */
+    }
+    
+    
+    .lightbox-img {
+        max-width: 90%; /* Increase image size on mobile */
+        max-height: 70%; /* Adjust height for better mobile experience */
+    }
+
+    .close {
+        top: 10px;
+        right: 10px; /* Bring the close button closer to the image */
+        font-size: 35px; /* Slightly smaller on mobile */
+    }
+
+    .prev, .next {
+        top: 45%; /* Adjust position relative to the image */
+        font-size: 25px; /* Reduce the size of the icons */
+        padding: 8px; /* Smaller padding for mobile */
+    }
+
+    .prev {
+        left: 15px; /* Move the prev button closer */
+    }
+
+    .next {
+        right: 15px; /* Move the next button closer */
     }
     
 }
