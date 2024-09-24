@@ -12,43 +12,6 @@ const backgroundImages = {
     whyChooseUs: 'whyus.jpg' // Background for Why Choose Us section
 };
 
-// Function to change the background image
-function changeBackground(imageUrl) {
-    document.body.style.backgroundImage = `url(${imageUrl})`;
-}
-
-// Function to detect which section is in the viewport
-function checkScroll() {
-    const scrollPosition = window.pageYOffset || document.documentElement.scrollTop; // Ensure compatibility on mobile
-    
-    const servicesPosition = servicesSection.getBoundingClientRect();
-    const whyChooseUsPosition = whyChooseUsSection.getBoundingClientRect();
-    
-    // Adjust thresholds for mobile to account for smaller screens
-    const threshold = window.innerHeight / 3; // This helps trigger the background change earlier
-
-    // Check if the user is within the Services section
-    if (scrollPosition >= servicesSection.offsetTop - threshold && scrollPosition < servicesSection.offsetTop + servicesSection.offsetHeight) {
-        changeBackground(backgroundImages.services);
-    }
-    // Check if the user is within the Why Choose Us section
-    else if (scrollPosition >= whyChooseUsSection.offsetTop - threshold && scrollPosition < whyChooseUsSection.offsetTop + whyChooseUsSection.offsetHeight) {
-        changeBackground(backgroundImages.whyChooseUs);
-    }
-    // Otherwise, set the default background
-    else {
-        changeBackground(backgroundImages.default);
-    }
-}
-
-// Attach the scroll event listener for both desktop and mobile
-window.addEventListener('scroll', checkScroll);
-
-// Set the initial background when the page loads
-window.addEventListener('load', () => {
-    changeBackground(backgroundImages.default);
-});
-
 
 // Get elements
 const popup = document.getElementById("inquiryPopup");
