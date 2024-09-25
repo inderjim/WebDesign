@@ -78,38 +78,38 @@
             <div class="popup-content">
                 <span class="close-btn">&times;</span>
                 <h2>Anfrage senden</h2>
-                 <form id="inquiryForm"
+                <form id="inquiryForm"
                       name="contact" 
                       method="POST" netlify
                       data-netlify="true"
                 >
-                    <label for="name">Name:</label><br>
+                    <label for="name">Name</label>
                     <input type="text" id="name" name="name" placeholder="Geben Sie Ihren Namen ein" required><br><br> <!-- Placeholder added -->
                     
-                    <label for="email">Email:</label><br>
+                    <label for="email">Email</label>
                     <input type="email" id="email" name="email" placeholder="Geben Sie Ihre E-Mail ein" required><br><br> <!-- Placeholder added -->
                     
-                    <label>Dienstleistung auswählen:</label>
+                    <label for="service">Dienstleistung</label>
                     <div class="checkbox-group">
                         <div>
-                            <input type="checkbox" id="heating" name="service[]" value="heating">
+                            <input type="checkbox" id="heating" name="dienstleistung[]" value="Heizung">
                             <label for="heating">Heizung</label>
                         </div>
                         <div>
-                            <input type="checkbox" id="plumbing" name="service[]" value="plumbing">
+                            <input type="checkbox" id="plumbing" name="dienstleistung[]" value="Sanitär">
                             <label for="plumbing">Sanitär</label>
                         </div>
                         <div>
-                            <input type="checkbox" id="repair" name="service[]" value="repair">
+                            <input type="checkbox" id="repair" name="dienstleistung[]" value="Reparatur & Wartung">
                             <label for="repair">Reparatur</label>
                         </div>
                     </div>
                     
                     
-                    <label for="attachment">Anhang hochladen:</label>
+                    <label for="attachment">Anhang hochladen</label>
                     <input type="file" id="attachment" name="attachment" accept=".jpg,.jpeg,.png,.pdf"><br><br>
                     
-                    <label for="message">Nachricht:</label><br>
+                    <label for="message">Nachricht</label>
                     <textarea id="message" name="message" placeholder="Schreiben Sie Ihre Nachricht hier" required></textarea><br><br> <!-- Placeholder added -->
                     
                     <button type="submit">Senden</button>
