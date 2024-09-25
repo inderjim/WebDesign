@@ -13,6 +13,24 @@ const backgroundImages = {
 };
 
 
+// Function to toggle the menu
+function toggleMenu() {
+    const navLinks = document.getElementById("navLinks");
+    navLinks.classList.toggle("active"); // Toggle the "active" class to show/hide menu
+}
+
+// Function to close the menu if clicked outside
+document.addEventListener('click', function(event) {
+    const navLinks = document.getElementById("navLinks");
+    const hamburger = document.getElementById("hamburger");
+
+    // Check if the clicked target is not the menu or the hamburger icon
+    if (!navLinks.contains(event.target) && !hamburger.contains(event.target)) {
+        navLinks.classList.remove("active"); // Close the menu
+    }
+});
+
+
 // Get elements
 const popup = document.getElementById("inquiryPopup");
 const inquiryBtn = document.getElementById("inquiryBtn");
